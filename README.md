@@ -4,7 +4,6 @@ A leaderboard-beating ensemble for the [ProteinGym DMS-Indels benchmark](https:/
 
 The method reaches an average Spearman correlation of **0.5604** across the 66-assay benchmark. The current public leader, PoET, is listed at **0.517**; this pipeline reproduces it at **0.5169** using the same hierarchical aggregation.
 
-This result is not yet an official ProteinGym leaderboard entry.
 
 ## Results
 
