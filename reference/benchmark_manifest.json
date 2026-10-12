@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "benchmark": "ProteinGym_v1.3 DMS indels (66 assays)",
+  "reference_sha256": "09534e16eeeb80ce22243f6cada151db654c7330117f2a97980f6707da87c7cd",
+  "scores_archive_sha256": "7f29c8f4066c931e02a521b6154ada3db97d843ee84c9be647f7bb3380be0bf7",
+  "scores_url": "https://marks.hms.harvard.edu/proteingym/ProteinGym_v1.3/zero_shot_indels_scores.zip",
+  "legacy_archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+  "upstream_evaluator_commit": "144fe22b07dfaeec2b366f2346203a9838a55b4c",
+  "assays": {
+    "A4_HUMAN_Seuma_2022_indels": {
+      "rows": 2346,
+      "score_csv_sha256": "502892c899991cee3e05020678a93598e82f72685978f4beb348bd38b20229da",
+      "ordered_sequences_sha256": "9ba1d30df8d17bbcc96ed8373aac886157424b416089d873697cdf0697c28cac"
+    },
+    "AMFR_HUMAN_Tsuboyama_2023_4G3O_indels": {
+      "rows": 117,
+      "score_csv_sha256": "0b81d8ccae05fc64915a252acf85cc2a5ce31889b58b8f2ba83e917db12a92ad",
+      "ordered_sequences_sha256": "dc286ee3df8fdabbaf96bfa63cce0b1ffc2eafdc707aeca6a5c91e167bbfed82"
+    },
+    "ARGR_ECOLI_Tsuboyama_2023_1AOY_indels": {
+      "rows": 181,
+      "score_csv_sha256": "e82436681e15c2d408f2755c171430376db54f792c25f2196e9b0337c01dd6d9",
+      "ordered_sequences_sha256": "fcf6dfffa32549216b6ee575a6523e7a709eb711cef76873acec87450e553918"
+    },
+    "B1LPA6_ECOSM_Russ_2020_indels": {
+      "rows": 3074,
+      "score_csv_sha256": "ac96937c4eece72018f290cdef5e5facf85eab51ca6e825fad397a4d0ae528c8",
+      "ordered_sequences_sha256": "8ad65fac3fedc5638986d06b26fe41c20bd4430513a067b6bc8ed6adc9f9910b"
+    },
+    "BBC1_YEAST_Tsuboyama_2023_1TG0_indels": {
+      "rows": 134,
+      "score_csv_sha256": "342a0b13727c927f588987162e4e373d199b3649259a552cf181cb28d5bdbe3c",
+      "ordered_sequences_sha256": "a04f78f0667d4639c95ac340353ab20e55555f067ddd9741951b0fad9fd97108"
+    },
+    "BCHB_CHLTE_Tsuboyama_2023_2KRU_indels": {
+      "rows": 82,
+      "score_csv_sha256": "e9fb0e2300b8311f566229693b2565df2e1368d67c5cd8222f1caf2c22e6a3b8",
+      "ordered_sequences_sha256": "91f99bbba4ae4a057839b3e9cc19698847e4f7ed4ff2de9c0eb993ce29211f88"
+    },
+    "BLAT_ECOLX_Gonzalez_2019_indels": {
+      "rows": 4751,
+      "score_csv_sha256": "9e644a15a03b7faebb873cd223e0672a8af780028d15f7976af4b8c3b0386c1d",
+      "ordered_sequences_sha256": "51f9c124e6046628a4d1c9a2ddd5adebbb916f20801060f4dcac8e9c7fcbf637"
+    },
+    "CAPSD_AAV2S_Sinai_2021_designed_indels": {
+      "rows": 225998,
+      "score_csv_sha256": "ee28b90ebf6010379b94a8cb309ab2bc249f346f579a37ea48e814957a64314f",
+      "ordered_sequences_sha256": "c7807ff247dff51b57c8f86abd39730b54845574cd342c523697d69ccaeaedc7"
+    },
+    "CAPSD_AAV2S_Sinai_2021_library_indels": {
+      "rows": 24908,
+      "score_csv_sha256": "fd0c23635c3508e91e193977677b951fd16cf2fc2d0e293eb824e848c7d43bcb",
+      "ordered_sequences_sha256": "2ea338b6d4399ce6f88941a4d010955673ea0e3d61ab78f70f83453facc6eedd"
+    },
+    "CATR_CHLRE_Tsuboyama_2023_2AMI_indels": {
+      "rows": 197,
+      "score_csv_sha256": "f4b19fd997f312d0d1d18e688ebe71b3c08e99f49e6fef2092f4798daef4305d",
+      "ordered_sequences_sha256": "fb51141d9bfd17c5199b20639bec94f30b10494978c678b8c107a0b1c70e83ac"
+    },
+    "CBPA2_HUMAN_Tsuboyama_2023_1O6X_indels": {
+      "rows": 205,
+      "score_csv_sha256": "56112478965fa2213be71ccab88e7556a35ba29874f3c3155ddaec51af6560e8",
+      "ordered_sequences_sha256": "421df2ad63019df61fb3583bfa8430d4f497514343919c5d345cc1a8f266b97c"
+    },
+    "CBX4_HUMAN_Tsuboyama_2023_2K28_indels": {
+      "rows": 129,
+      "score_csv_sha256": "7a23a55bcf780809cc5931dbb82beed5f8d805e2851742b2f5190698cdc1e32d",
+      "ordered_sequences_sha256": "8867ecc16040f5da221f8875dffa5908d0dea7920e5a0186d94ab72187e54d60"
+    },
+    "CSN4_MOUSE_Tsuboyama_2023_1UFM_indels": {
+      "rows": 195,
+      "score_csv_sha256": "3287970a713a885fe1d7169416d383a933f7efff6be780e26dcf5005aa864d6b",
+      "ordered_sequences_sha256": "ac20cb1cf5b860d430713d50745f6d0f9700434714ef70999cc68a56d555f6b0"
+    },
+    "CUE1_YEAST_Tsuboyama_2023_2MYX_indels": {
+      "rows": 140,
+      "score_csv_sha256": "53f9a8988bd45488fc8cf98691995f239ee711236eea414de36fe9f053982613",
+      "ordered_sequences_sha256": "1e3b4804f7959ab5ebe813089c5cd54dc90a6da3e3e37fb393d8f44b34087a16"
+    },
+    "DN7A_SACS2_Tsuboyama_2023_1JIC_indels": {
+      "rows": 136,
+      "score_csv_sha256": "325017bbba2d1a833cf568ae246e84a881dca7a79bca0ce0cbb0268306ab339c",
+      "ordered_sequences_sha256": "65c80f505ca9afb31ffaeb54372b601d8b8c14c4ee47a2306db358c196e44def"
+    },
+    "DNJA1_HUMAN_Tsuboyama_2023_2LO1_indels": {
+      "rows": 174,
+      "score_csv_sha256": "76cf26582d529b21ffad26739a9aba3b3dd97f433e9064d1d442e7e4fb8a204a",
+      "ordered_sequences_sha256": "d34a5a6b523c92cdafdc3e36f23f064034d6ee726e15ad3fd2b0b13a957f782d"
+    },
+    "DOCK1_MOUSE_Tsuboyama_2023_2M0Y_indels": {
+      "rows": 154,
+      "score_csv_sha256": "03a0ed037795c43f5b43de0e272ed98926d6688a05d730789e91345b71878ad5",
+      "ordered_sequences_sha256": "df86d38977f9c370d4fe96a38ccefd4c109b4b58bbf869349ca5d30924396713"
+    },
+    "EPHB2_HUMAN_Tsuboyama_2023_1F0M_indels": {
+      "rows": 185,
+      "score_csv_sha256": "65171644051b58c5dd8b9fd272c275f654fa6fc7338404ea7f02a0665cea49c6",
+      "ordered_sequences_sha256": "db2c73a19245b5faabe32d3a0439f505c31db00db239585b3bee543ad87a1d1c"
+    },
+    "FECA_ECOLI_Tsuboyama_2023_2D1U_indels": {
+      "rows": 193,
+      "score_csv_sha256": "ce373d16c568f5c0beff26a1193a24e4bbdea3fd787ebc30000a0f9e54f01f5e",
+      "ordered_sequences_sha256": "d0e808b7de3557f698427820527a116f96c4257b6d961b1347eaa8b5d0adc59f"
+    },
+    "HCP_LAMBD_Tsuboyama_2023_2L6Q_indels": {
+      "rows": 148,
+      "score_csv_sha256": "976786cddad2c1ca510b93a78ea38b3446a46304f6b641c994ab7bbf2fee24d0",
+      "ordered_sequences_sha256": "7f090c85834cfe7a3b8dd2ce5a88ef7c33296b02eae7019df5b93d13008cc7e8"
+    },
+    "HECD1_HUMAN_Tsuboyama_2023_3DKM_indels": {
+      "rows": 154,
+      "score_csv_sha256": "e41a8f59eb6b1346186bc90744cc26c540e2a04d81654285cb4a9f949d239095",
+      "ordered_sequences_sha256": "76c00a01e83668325aadd631c2b0a2b16929e38cee964bcd6f99b6c47836de64"
+    },
+    "HIS7_YEAST_Pokusaeva_2019_indels": {
+      "rows": 6102,
+      "score_csv_sha256": "85acc0958b63e82a4dedfa60413ad0072568466afbdd82fe14475454587926a6",
+      "ordered_sequences_sha256": "632cd5634673e4f6ade1432ee50f031306da80d183fc6ba24315da20a42d2756"
+    },
+    "ILF3_HUMAN_Tsuboyama_2023_2L33_indels": {
+      "rows": 193,
+      "score_csv_sha256": "98c4733b13260d0a558314a56bcbabd65553c2a8e427523903c1eb85b983f88c",
+      "ordered_sequences_sha256": "b96b9058c6b56d4578b7ba2e924c613c7edca197a9c87fa1cb35c63382de13ac"
+    },
+    "KCNJ2_MOUSE_Macdonald_2022_indels": {
+      "rows": 10501,
+      "score_csv_sha256": "b15c22c3de3fb1dbe4dd8819e3c080e4fc512a4aa2b7c677b8bc8607e7b91348",
+      "ordered_sequences_sha256": "b45bda240dd3d1c6b29c4c68df3994173ec3b90d555c7006364229a5a9ffc8d2"
+    },
+    "MAFG_MOUSE_Tsuboyama_2023_1K1V_indels": {
+      "rows": 115,
+      "score_csv_sha256": "6b41845eea1ed2e5a9083d37ec72134991f8d40e46f1f0b464d583ff046fc388",
+      "ordered_sequences_sha256": "438bdca86478e7ceff43675470e9ba4fa819f83c911f2c773ca226fc7618e844"
+    },
+    "MBD11_ARATH_Tsuboyama_2023_6ACV_indels": {
+      "rows": 131,
+      "score_csv_sha256": "39ec3c08e3f09f170ca06570f9c1cde643be42e453a0e591555e7084ede7e879",
+      "ordered_sequences_sha256": "fdb97e6eff3335af8ef7ee6ac19cd92e1ceb6987979944060b26fffbdd6c6072"
+    },
+    "MYO3_YEAST_Tsuboyama_2023_2BTT_indels": {
+      "rows": 80,
+      "score_csv_sha256": "82b13ca04954a963671cbda38738289d95b22adc0f8a69e54d62634fab2fc9f9",
+      "ordered_sequences_sha256": "87246e5833433db63b0782519e9c913bf89e931c92a3abedab583a4e8000e0a4"
+    },
+    "NKX31_HUMAN_Tsuboyama_2023_2L9R_indels": {
+      "rows": 178,
+      "score_csv_sha256": "3e0bd142b4fb9036d2809c12f929715d699acb8ace6b6a22f7e00fb70cbe48ad",
+      "ordered_sequences_sha256": "291c623ac978787e3f0768fd5fbc629db31bc0ab724f8819ed430ae18a5e3cef"
+    },
+    "NUSA_ECOLI_Tsuboyama_2023_1WCL_indels": {
+      "rows": 191,
+      "score_csv_sha256": "021cc80191991c0dd5b98378a4fd1d3e5afe9d5f4abf4246b4c9dabbc8fcc887",
+      "ordered_sequences_sha256": "5e3baf9fbb8018fd0d69fb55d0573f9f7159034a2f05afd88558d3a57c32baa0"
+    },
+    "NUSG_MYCTU_Tsuboyama_2023_2MI6_indels": {
+      "rows": 157,
+      "score_csv_sha256": "d2e91a4f42a00ed59dd4cf4a098c3e6bc09562ee2fcfa8833d74037cc1a9b59c",
+      "ordered_sequences_sha256": "40694fc7e76bd45e98961070b1fc346978fc124c7173569b40f87c99d21febbc"
+    },
+    "OBSCN_HUMAN_Tsuboyama_2023_1V1C_indels": {
+      "rows": 169,
+      "score_csv_sha256": "22305cb3cd39cf447451269e20b998ec699087ebaa9c98d047e244802b2d69be",
+      "ordered_sequences_sha256": "034ab39d66309ee7ecfb301885943f08f6175ef5116a6f79e2e70e749612f269"
+    },
+    "ODP2_GEOSE_Tsuboyama_2023_1W4G_indels": {
+      "rows": 47,
+      "score_csv_sha256": "75469cba822462ac49a89b92baa7502d91fa4684a38ccc3d5e30c4862ac73a9f",
+      "ordered_sequences_sha256": "f715aa9ccab099859b8187a68b1a5147c4fb986378d5ad41ff4f6f2ca643ff96"
+    },
+    "OTU7A_HUMAN_Tsuboyama_2023_2L2D_indels": {
+      "rows": 84,
+      "score_csv_sha256": "70dbb35dc39a7187aba80c6ab3c299ab84e39d03b5a14700af1d0ec8d789002c",
+      "ordered_sequences_sha256": "5bba264276e906f43959f3785de77adcb046bdf23a8580902980664cb08c8df4"
+    },
+    "P53_HUMAN_Kotler_2018_indels": {
+      "rows": 341,
+      "score_csv_sha256": "e374e0fe1181dd225ffdfb4960b0fc29528635101be9172fb7e22b229b7e8be8",
+      "ordered_sequences_sha256": "1db496cb24993006ee8044ca21eeeba014f3ee778b10832a14c00ecce632928d"
+    },
+    "PIN1_HUMAN_Tsuboyama_2023_1I6C_indels": {
+      "rows": 106,
+      "score_csv_sha256": "88ca81c137a4cb1538c063fd55476516193a77d8aec8255eb38322c534013520",
+      "ordered_sequences_sha256": "4da206676c03358ff68677bdabaa86b4583f4a4f2c5f609a2c56bc6dd150b945"
+    },
+    "PITX2_HUMAN_Tsuboyama_2023_2L7M_indels": {
+      "rows": 117,
+      "score_csv_sha256": "ed26e4e19400f1249b74a318b04daae85fddc4402429ed10b19c182f3f829f98",
+      "ordered_sequences_sha256": "5fbaa0967d656910b16fc8243ce8df677e2ac53321eb1663982b240f891e4221"
+    },
+    "PKN1_HUMAN_Tsuboyama_2023_1URF_indels": {
+      "rows": 187,
+      "score_csv_sha256": "503a6ed3aa2d7187fe5637e846b7b5ea94d5006b2ae9c07ce4c21f54d02272eb",
+      "ordered_sequences_sha256": "c6d9bb5f9bdfa6c178ddf4d64dbc08c8da7ad9c42b5d6a941d5722b704847eb8"
+    },
+    "POLG_PESV_Tsuboyama_2023_2MXD_indels": {
+      "rows": 149,
+      "score_csv_sha256": "d3459eb8f0d5b56622424e020c4aa339557b764f98a5ee6bd766b1241b518115",
+      "ordered_sequences_sha256": "6e4a5f8da23a6f3d9b4677c922150702c0efc178a696bfe117c017bdb981a0ff"
+    },
+    "PR40A_HUMAN_Tsuboyama_2023_1UZC_indels": {
+      "rows": 168,
+      "score_csv_sha256": "43ea9cf1b94d2c177bb515b22aa7368999330f5dd6f2cf00a6463d4b51b24dbe",
+      "ordered_sequences_sha256": "7fb16d013cd1eaf8f53b1af2a8b8d129fbbad883228027d7c3252dc1325958e0"
+    },
+    "PSAE_PICP2_Tsuboyama_2023_1PSE_indels": {
+      "rows": 175,
+      "score_csv_sha256": "3f90130610c0df2376910dc2bbd25da4686374bd4439687b963871715fdc070e",
+      "ordered_sequences_sha256": "b02ea1d6b99f5f761dc8745c897316b6f97dd52da7d4b7d1563134859e9d69f1"
+    },
+    "PTEN_HUMAN_Mighell_2018_indels": {
+      "rows": 314,
+      "score_csv_sha256": "8952c842b5bcaf9fe1f2ff5ff1e1cbd347527ba5be6560cd0f9b37f4999c02e3",
+      "ordered_sequences_sha256": "8fe205ec2bc39d786bbf40b02965ef4f453e923b6cc023ab708fbbf6e26779df"
+    },
+    "Q8EG35_SHEON_Campbell_2022_indels": {
+      "rows": 331,
+      "score_csv_sha256": "d66ba5269112af7ec909aee0ee223e21a55673ea785f9cfeaaa2f93fc885f6e1",
+      "ordered_sequences_sha256": "cebb3a7896c86baf38a59d09ba31c22a40fb08549395a055eb87db1025e2f968"
+    },
+    "RAD_ANTMA_Tsuboyama_2023_2CJJ_indels": {
+      "rows": 97,
+      "score_csv_sha256": "75727f2ee12db3a8770df19d3f9c1e788a43079daf02c85caf79960a9109b582",
+      "ordered_sequences_sha256": "eb03d22dbdbd0fc47e2eda70fec434264b8e158cb5698bef322e760d8fc46066"
+    },
+    "RCD1_ARATH_Tsuboyama_2023_5OAO_indels": {
+      "rows": 124,
+      "score_csv_sha256": "4ded3c44db639f4b6dfb606204c4b38c6cc3cc9e3db4e883ba7d121929daf639",
+      "ordered_sequences_sha256": "e4c2d5eac548b42aff97c44d7439a71c7d7b4cfd7605c4eff81a830657ada575"
+    },
+    "RD23A_HUMAN_Tsuboyama_2023_1IFY_indels": {
+      "rows": 120,
+      "score_csv_sha256": "e9da5ff6bf90de0ecbb38b7b9886fda532ab193d25903ce870bce382023d26b7",
+      "ordered_sequences_sha256": "44d826fbe4a8c0d5e9b701ef5f47e65e29e3cf72f8b72023744a2805eab514f9"
+    },
+    "RPC1_BP434_Tsuboyama_2023_1R69_indels": {
+      "rows": 164,
+      "score_csv_sha256": "14f1e6d931ae6cf0a03dc58d3b3b4057ce329fcec7c66524a2dc0c5481ced423",
+      "ordered_sequences_sha256": "f0a80c49ff6a4a1a173e43824bafd1cb6f3a9986bc0ba7ef96659c9492bafb9b"
+    },
+    "RS15_GEOSE_Tsuboyama_2023_1A32_indels": {
+      "rows": 176,
+      "score_csv_sha256": "574b8a10ec1200144bfcd34d15573b780582f41ae1dff18a8dfef02d9229439f",
+      "ordered_sequences_sha256": "0ddd0531ab278e8fee37bc668f20d0f7dd376937752781fb682df5502594ded9"
+    },
+    "S22A1_HUMAN_Yee_2023_abundance_indels": {
+      "rows": 430,
+      "score_csv_sha256": "a641acf93266b013ecbf607bd666a67e8f69f86340a9b1c0a694062b4d0a858d",
+      "ordered_sequences_sha256": "e2fefb2afde5648f7129d5fccdfb45b1e5c0918441be4a6d84bcf13df1449a8c"
+    },
+    "S22A1_HUMAN_Yee_2023_activity_indels": {
+      "rows": 490,
+      "score_csv_sha256": "7640eda22dc04b73d5fdf8952e1d1b34d21080e353bd07fedaf284b5fa76a834",
+      "ordered_sequences_sha256": "97b17bc61e1c96135304df61132c949a74e556d4a8ce244eca246de6e241dd10"
+    },
+    "SAV1_MOUSE_Tsuboyama_2023_2YSB_indels": {
+      "rows": 86,
+      "score_csv_sha256": "291104c005ebf36e97f48ae2dd38714306ca345e00b7a16691769a2dd20c5564",
+      "ordered_sequences_sha256": "10c90cbcccda276d935649a58ff76c31709eb9fef5c84eca02707451b023e087"
+    },
+    "SDA_BACSU_Tsuboyama_2023_1PV0_indels": {
+      "rows": 127,
+      "score_csv_sha256": "4071fda408f048e054aa7caaf7fff3ab1bf66ee8f9e0231ff95b12bb86d70b6b",
+      "ordered_sequences_sha256": "d3b84cbde52c8465787c5c621478d97c0a61e1ccc55c448b6145794f8c2d05a8"
+    },
+    "SOX30_HUMAN_Tsuboyama_2023_7JJK_indels": {
+      "rows": 109,
+      "score_csv_sha256": "5ce631ceb942f214f94165e16e0fcf35f301a6a20c3d4c0d73c3a9d4c3416672",
+      "ordered_sequences_sha256": "907e5639cfa26a308f122ff99fd7b4c53dc14508197c1068dadfac4f57bcd105"
+    },
+    "SPG2_STRSG_Tsuboyama_2023_5UBS_indels": {
+      "rows": 148,
+      "score_csv_sha256": "27a28b63ed1fcb8bf39f7f5847f417383eff18f00087b43d61b0eee041bdadbb",
+      "ordered_sequences_sha256": "c48c8938cb29f35e1232d2ed3e385b0c259f22c204f6a06fe09a83a8be01f07f"
+    },
+    "SPTN1_CHICK_Tsuboyama_2023_1TUD_indels": {
+      "rows": 129,
+      "score_csv_sha256": "bea9925df91a66239043787c1651a46fd1c2097503d32998aa150e9fb63415dc",
+      "ordered_sequences_sha256": "540f51625606d27edad84be77214590da39b4055718e603d335e3699754ce325"
+    },
+    "SQSTM_MOUSE_Tsuboyama_2023_2RRU_indels": {
+      "rows": 111,
+      "score_csv_sha256": "ebaef4e95093242b7a1595e1dac3412ba8d5a593d2f1d0595d0df894c69a1ee7",
+      "ordered_sequences_sha256": "b94c370fe785566f37770fc45997da684df270d8445675b61d658eacd0243315"
+    },
+    "SR43C_ARATH_Tsuboyama_2023_2N88_indels": {
+      "rows": 135,
+      "score_csv_sha256": "35b6ca974c085c3051add0bb1c6acf5d775bd6fd124f30cdc125de929035bc16",
+      "ordered_sequences_sha256": "3bd0fde6e2dc41fb41dd34f6ad9ced1fa59e185ab33670c61870a93dd7a25067"
+    },
+    "SRBS1_HUMAN_Tsuboyama_2023_2O2W_indels": {
+      "rows": 154,
+      "score_csv_sha256": "d3fbf245355101ca37680f41e6287c82d947a344a59ef834e682d37b9982a169",
+      "ordered_sequences_sha256": "545d852a85ee30ae246e9fa3938d34d2034ff9ff2eed1fe2ae355db761a6f869"
+    },
+    "TCRG1_MOUSE_Tsuboyama_2023_1E0L_indels": {
+      "rows": 99,
+      "score_csv_sha256": "69ff7866ab829e917e91b06bba994d6180bdff1c3bd04527efbad4db98c62997",
+      "ordered_sequences_sha256": "679216d5f88865604e592af19e58e8e6cc1b768adee8856aaa8eeb9bc487996d"
+    },
+    "THO1_YEAST_Tsuboyama_2023_2WQG_indels": {
+      "rows": 82,
+      "score_csv_sha256": "a7e5cbf99f74628b1cdc1777a37425ade3425c1d998afc976005aaa8baf0a6aa",
+      "ordered_sequences_sha256": "891b3a99131ed09cd504df59e0282365e5277f6ac096d640768c6c6af7b3a01e"
+    },
+    "TNKS2_HUMAN_Tsuboyama_2023_5JRT_indels": {
+      "rows": 171,
+      "score_csv_sha256": "f62e793baa144dc4f3753983be152493567780866778ce4cc5a7631b6f9ecf06",
+      "ordered_sequences_sha256": "18b9f0030aff5ecfe88a0ccccb8c294f4c30d3bddfc4222c4d59916806e4a3f5"
+    },
+    "UBE4B_HUMAN_Tsuboyama_2023_3L1X_indels": {
+      "rows": 147,
+      "score_csv_sha256": "78a1fa8bef273d7e3a504d56961356befc6937eec57ab5afd96d00fdaa7d3dae",
+      "ordered_sequences_sha256": "cb030769c595a32b5c2015f08f2f9ef32dc120294bb43d099aca682eb79d8e65"
+    },
+    "UBR5_HUMAN_Tsuboyama_2023_1I2T_indels": {
+      "rows": 156,
+      "score_csv_sha256": "fd0f0f30ef8f7ad3fad10ddc08cd6a2ef4f0cf8bd51dd49633a479b532d31b85",
+      "ordered_sequences_sha256": "aa9f85b6cc82000ea0a247e3be04ea40fb7d60d22414ab0b3f50558d517310d4"
+    },
+    "VG08_BPP22_Tsuboyama_2023_2GP8_indels": {
+      "rows": 101,
+      "score_csv_sha256": "990ce13f9c64d166208c30614e44b2bde569427894de4793d003cfdc8f3d0c4a",
+      "ordered_sequences_sha256": "f49f2e055e61b047716eab82f1ed90cd6b9d5ef9a2e907bc13fcdefe5d319c69"
+    },
+    "VILI_CHICK_Tsuboyama_2023_1YU5_indels": {
+      "rows": 156,
+      "score_csv_sha256": "4b123dc69e0b0542f0dcf611e1dd4e6d27a5c966af313d49fbf95d490d8d1c3b",
+      "ordered_sequences_sha256": "2cda7e4c5f512fa540a85cc8996c45faf107ce6148386a20435bdf5875cc9c2e"
+    },
+    "VRPI_BPT7_Tsuboyama_2023_2WNM_indels": {
+      "rows": 154,
+      "score_csv_sha256": "3a0d20d54facb0d9533935632745c021b8848c568dff214c8c5c2af80cc8f003",
+      "ordered_sequences_sha256": "4db5a551b7c62b2ce15a5f294067cb0b681e27accdb4909d7a0403373a98b0af"
+    },
+    "YNZC_BACSU_Tsuboyama_2023_2JVD_indels": {
+      "rows": 104,
+      "score_csv_sha256": "2ac45ccc6aa339965c44ae0d0969cdd608e93b79f39d470e46944204743bf0c2",
+      "ordered_sequences_sha256": "957eb93673a306656541a2fa1a58cb7d008e8d5dc6f9039e5dd323ca14ffa9d2"
+    }
+  }
+}

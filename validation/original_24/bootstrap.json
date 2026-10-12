@@ -1,0 +1,11 @@
+{
+  "candidate": "The_Mountain",
+  "reference": "PoET",
+  "repeats": 5000,
+  "seed": 0,
+  "point_difference": 0.040998503831163546,
+  "bootstrap_mean": 0.04360274034823251,
+  "ci_2.5": 0.019623502583312327,
+  "ci_97.5": 0.07541605412059804,
+  "fraction_positive": 1.0
+}

@@ -1,0 +1,692 @@
+{
+  "schema_version": 1,
+  "profile": "sequence_6",
+  "signals": [
+    "RITA_s",
+    "RITA_m",
+    "RITA_l",
+    "RITA_xl",
+    "ProtGPT2",
+    "ESM2_650M"
+  ],
+  "model_version": "mountain-average-ties-v1",
+  "python": "3.12.12",
+  "dependencies": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3"
+  },
+  "tie_policy": "average",
+  "signal_storage_dtype": "float32",
+  "reference_sha256": "09534e16eeeb80ce22243f6cada151db654c7330117f2a97980f6707da87c7cd",
+  "scores_archive_sha256": "7f29c8f4066c931e02a521b6154ada3db97d843ee84c9be647f7bb3380be0bf7",
+  "upstream_evaluator_commit": "144fe22b07dfaeec2b366f2346203a9838a55b4c",
+  "bootstrap_seed": 0,
+  "bootstrap_repeats": 5000,
+  "split_seed": 0,
+  "validation_limitation": "Historical split was used during discovery; it is not untouched independent validation.",
+  "esm2_provenance": {
+    "A4_HUMAN_Seuma_2022_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "AMFR_HUMAN_Tsuboyama_2023_4G3O_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "ARGR_ECOLI_Tsuboyama_2023_1AOY_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "B1LPA6_ECOSM_Russ_2020_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "BBC1_YEAST_Tsuboyama_2023_1TG0_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "BCHB_CHLTE_Tsuboyama_2023_2KRU_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "BLAT_ECOLX_Gonzalez_2019_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "CAPSD_AAV2S_Sinai_2021_designed_indels": {
+      "kind": "historical_consensus_only_fallback"
+    },
+    "CAPSD_AAV2S_Sinai_2021_library_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "CATR_CHLRE_Tsuboyama_2023_2AMI_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "CBPA2_HUMAN_Tsuboyama_2023_1O6X_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "CBX4_HUMAN_Tsuboyama_2023_2K28_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "CSN4_MOUSE_Tsuboyama_2023_1UFM_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "CUE1_YEAST_Tsuboyama_2023_2MYX_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "DN7A_SACS2_Tsuboyama_2023_1JIC_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "DNJA1_HUMAN_Tsuboyama_2023_2LO1_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "DOCK1_MOUSE_Tsuboyama_2023_2M0Y_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "EPHB2_HUMAN_Tsuboyama_2023_1F0M_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "FECA_ECOLI_Tsuboyama_2023_2D1U_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "HCP_LAMBD_Tsuboyama_2023_2L6Q_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "HECD1_HUMAN_Tsuboyama_2023_3DKM_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "HIS7_YEAST_Pokusaeva_2019_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "ILF3_HUMAN_Tsuboyama_2023_2L33_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "KCNJ2_MOUSE_Macdonald_2022_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "MAFG_MOUSE_Tsuboyama_2023_1K1V_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "MBD11_ARATH_Tsuboyama_2023_6ACV_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "MYO3_YEAST_Tsuboyama_2023_2BTT_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "NKX31_HUMAN_Tsuboyama_2023_2L9R_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "NUSA_ECOLI_Tsuboyama_2023_1WCL_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "NUSG_MYCTU_Tsuboyama_2023_2MI6_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "OBSCN_HUMAN_Tsuboyama_2023_1V1C_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "ODP2_GEOSE_Tsuboyama_2023_1W4G_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "OTU7A_HUMAN_Tsuboyama_2023_2L2D_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "P53_HUMAN_Kotler_2018_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "PIN1_HUMAN_Tsuboyama_2023_1I6C_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "PITX2_HUMAN_Tsuboyama_2023_2L7M_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "PKN1_HUMAN_Tsuboyama_2023_1URF_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "POLG_PESV_Tsuboyama_2023_2MXD_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "PR40A_HUMAN_Tsuboyama_2023_1UZC_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "PSAE_PICP2_Tsuboyama_2023_1PSE_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "PTEN_HUMAN_Mighell_2018_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "Q8EG35_SHEON_Campbell_2022_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "RAD_ANTMA_Tsuboyama_2023_2CJJ_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "RCD1_ARATH_Tsuboyama_2023_5OAO_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "RD23A_HUMAN_Tsuboyama_2023_1IFY_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "RPC1_BP434_Tsuboyama_2023_1R69_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "RS15_GEOSE_Tsuboyama_2023_1A32_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "S22A1_HUMAN_Yee_2023_abundance_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "S22A1_HUMAN_Yee_2023_activity_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "SAV1_MOUSE_Tsuboyama_2023_2YSB_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "SDA_BACSU_Tsuboyama_2023_1PV0_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "SOX30_HUMAN_Tsuboyama_2023_7JJK_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "SPG2_STRSG_Tsuboyama_2023_5UBS_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "SPTN1_CHICK_Tsuboyama_2023_1TUD_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "SQSTM_MOUSE_Tsuboyama_2023_2RRU_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "SR43C_ARATH_Tsuboyama_2023_2N88_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "SRBS1_HUMAN_Tsuboyama_2023_2O2W_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "TCRG1_MOUSE_Tsuboyama_2023_1E0L_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "THO1_YEAST_Tsuboyama_2023_2WQG_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "TNKS2_HUMAN_Tsuboyama_2023_5JRT_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "UBE4B_HUMAN_Tsuboyama_2023_3L1X_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "UBR5_HUMAN_Tsuboyama_2023_1I2T_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "VG08_BPP22_Tsuboyama_2023_2GP8_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "VILI_CHICK_Tsuboyama_2023_1YU5_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "VRPI_BPT7_Tsuboyama_2023_2WNM_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    },
+    "YNZC_BACSU_Tsuboyama_2023_2JVD_indels": {
+      "kind": "explicit_legacy_migration",
+      "archive_sha256": "9c1a725b36d4a78bd1901e50d250841aa4752e9f10e193ec871a24b01be48e72",
+      "alignment_checks": "labels within 1e-12 decimal parsing tolerance and components within two float32 rounding units",
+      "limitation": "Legacy archive did not store sequences/checkpoint metadata. Historical ESM2 ordering and weights cannot be independently established; new hash binding is prospective.",
+      "historical_scoring_policy": "unmasked token confidence, prefix truncation at 1022 residues"
+    }
+  },
+  "outputs_sha256": {
+    "assay_scores.csv": "47d71217e6c070bb20eb3dea5a423928c8130b34828f923e772904a6840a71e9",
+    "bootstrap.json": "376e0d196d457235af21b3f0d3d6d4748f7f7704e70d59b3854026eb10bcd8c9",
+    "bootstrap_differences.npy": "dc2b4710a838654a7c22e3c77534607cc07eb7acfa821f784bda9ccfc1b4259b",
+    "labels/A4_HUMAN_Seuma_2022_indels.csv": "3fbe6c1631e1ce5ba275e7aaf4c31501655f8259250f5b0b7c40cb57980ce78f",
+    "labels/AMFR_HUMAN_Tsuboyama_2023_4G3O_indels.csv": "6b36adb6481f7aff4ef76af2f1ee0214aadf7c2a6c3fe7789a0f16dba0ddd9c8",
+    "labels/ARGR_ECOLI_Tsuboyama_2023_1AOY_indels.csv": "2d296665f73276f98ee59856777f43b3369f83f05ed0d20395b94bb608780a2c",
+    "labels/B1LPA6_ECOSM_Russ_2020_indels.csv": "1a9ea697370d84099ea8185aa18b3d9b376fc6f66fa83d8c17b8afcc76d71ac7",
+    "labels/BBC1_YEAST_Tsuboyama_2023_1TG0_indels.csv": "f6dfc78447e8663272a6f91a97c8670bfb349bf2abc42e3b15c3582472b8a1f7",
+    "labels/BCHB_CHLTE_Tsuboyama_2023_2KRU_indels.csv": "2b519f2a2bab1968b1b7d64f145e06cd448c7b991604e1fa57d134ace2bd1c99",
+    "labels/BLAT_ECOLX_Gonzalez_2019_indels.csv": "cc44ea1db6215ca92a7f92942200dc17f78f32331c7197f7c0f6df12adc9fe0f",
+    "labels/CAPSD_AAV2S_Sinai_2021_designed_indels.csv": "017944eac0f25f6da0e1c733e0303acab3bd1949522a2019bd8b80d8501bbc7b",
+    "labels/CAPSD_AAV2S_Sinai_2021_library_indels.csv": "cdf78fc23551c80ffef2163494d72bc5b7a914e7731724333e275c4a58e3e544",
+    "labels/CATR_CHLRE_Tsuboyama_2023_2AMI_indels.csv": "0517e28caa4f8a268db4bc32e86a41f47efceef68f1a41debd154cb280865bf7",
+    "labels/CBPA2_HUMAN_Tsuboyama_2023_1O6X_indels.csv": "25c42e9146dc87a3008817f0d2975ba7f94374d06f3facd9a9eaa77458968c3c",
+    "labels/CBX4_HUMAN_Tsuboyama_2023_2K28_indels.csv": "bf4b8bcc2335abd559ef24903e85aab4a7ebc57f5a87306c422466737fc74cb1",
+    "labels/CSN4_MOUSE_Tsuboyama_2023_1UFM_indels.csv": "ec9afdffe343a64a0ea192966e99802d6fd8b645482a33271aaab36f42a21529",
+    "labels/CUE1_YEAST_Tsuboyama_2023_2MYX_indels.csv": "bc4d0a1a52567823d9aff3375fb573dad617fb8107825ad28f58a12640b94495",
+    "labels/DN7A_SACS2_Tsuboyama_2023_1JIC_indels.csv": "12852811be3fba5bd14cfae31dcc04430aebd7fc706611daf97a2a3265571e90",
+    "labels/DNJA1_HUMAN_Tsuboyama_2023_2LO1_indels.csv": "95525df5a76cf225e78af66d200a4e2877a3c50caf5a57b6242d7cbfb769e6ed",
+    "labels/DOCK1_MOUSE_Tsuboyama_2023_2M0Y_indels.csv": "67af9f994a4abbce5a51f7e4d42e3e8b112bad2b172d1dcd7ea31a790d4c7c86",
+    "labels/EPHB2_HUMAN_Tsuboyama_2023_1F0M_indels.csv": "01064629cc4ee98ddfba628bb57729adbd9ebec8077d58fc3e8840bcab48aa3b",
+    "labels/FECA_ECOLI_Tsuboyama_2023_2D1U_indels.csv": "ad2a15f632a2d7d6111c234bee55972af4d35a04ff8e8d0ecb51c4abfb58ab52",
+    "labels/HCP_LAMBD_Tsuboyama_2023_2L6Q_indels.csv": "dc053b4eb6b69b58d94b4bd8895fc23a2fb52270d70b544739193963078a1c82",
+    "labels/HECD1_HUMAN_Tsuboyama_2023_3DKM_indels.csv": "173fdbe55e843f04a1a90c7449976c56e8c7665ca15dc218622ca1e65302d659",
+    "labels/HIS7_YEAST_Pokusaeva_2019_indels.csv": "78fb8f7442e5c8f3a0362f2587db8665264e7acac71f737234cf4dd588527c44",
+    "labels/ILF3_HUMAN_Tsuboyama_2023_2L33_indels.csv": "d60e87ca3e273596249138b8a489905defd8becaa0c2a3cb1013e74737a228af",
+    "labels/KCNJ2_MOUSE_Macdonald_2022_indels.csv": "73e9bca0484fc75f44855fc97dd47c7779e3570ba8f193e1e242ea2028dca8cc",
+    "labels/MAFG_MOUSE_Tsuboyama_2023_1K1V_indels.csv": "40d3af15bdf4af653ac9ccfe4628bcee69dbb3e1beb74cee77ba9ff3e85067d6",
+    "labels/MBD11_ARATH_Tsuboyama_2023_6ACV_indels.csv": "8cb031b5e795c1c3dc3c29686e2bac449e7714e20b698f99cc2115722b8b19c6",
+    "labels/MYO3_YEAST_Tsuboyama_2023_2BTT_indels.csv": "3bace7ec73012a65949674ad5cc1ee70f692f941e4c5271d78444bbf38338387",
+    "labels/NKX31_HUMAN_Tsuboyama_2023_2L9R_indels.csv": "2f621cbf32a39f0b215ea4e5b0a3946454238b140885dbcf306838a3aceafbb9",
+    "labels/NUSA_ECOLI_Tsuboyama_2023_1WCL_indels.csv": "65cd0634996c809c5858424300edceab6770bb0961624788d183ba4b096dd471",
+    "labels/NUSG_MYCTU_Tsuboyama_2023_2MI6_indels.csv": "7ded1bfc5ad7745f50b28390ad4ceaacb5d9c31748a0ab27c3b60447142b9e2a",
+    "labels/OBSCN_HUMAN_Tsuboyama_2023_1V1C_indels.csv": "ce376afdae84f9b0affc410e6f7551a68f620a5dbd14bb8068c572bc4fa09f06",
+    "labels/ODP2_GEOSE_Tsuboyama_2023_1W4G_indels.csv": "0a94157887794b7102871761bfcac14388448cfad1a54a4dc72a17fb7f2664c7",
+    "labels/OTU7A_HUMAN_Tsuboyama_2023_2L2D_indels.csv": "3001bb563c370a9b9677c006782ca25f1f8f011f56e1c65d83aad27f675a0fd3",
+    "labels/P53_HUMAN_Kotler_2018_indels.csv": "8ddc3c7608fa25ab6bf23e7a0f1de3bfb39f66998f89e83ad7170a0e8a901116",
+    "labels/PIN1_HUMAN_Tsuboyama_2023_1I6C_indels.csv": "b72bf7b7d1b2c43e9763ccb86a9e12d407ef95b1a74d4d13cf21b78696267904",
+    "labels/PITX2_HUMAN_Tsuboyama_2023_2L7M_indels.csv": "90a15e3cdf8ccaa36b8c641acc02ddfa7e3d4a63e28e58040ea251f9901f34f0",
+    "labels/PKN1_HUMAN_Tsuboyama_2023_1URF_indels.csv": "06d219a953bf4e6b614deb7fa4b870aa8520e2dc5e7ffcae301b9133db3fb0bd",
+    "labels/POLG_PESV_Tsuboyama_2023_2MXD_indels.csv": "264751fbbf3e24fc6f548af13917ef53fbc6e383c82e5e354f229124d219533d",
+    "labels/PR40A_HUMAN_Tsuboyama_2023_1UZC_indels.csv": "fd8e2c24b47bdd8240cd023434a4d35e81e13e2135413bf9d4fc7dafe8ca4e5c",
+    "labels/PSAE_PICP2_Tsuboyama_2023_1PSE_indels.csv": "6ec1e8fd3c73526276859d233bc99d214750565ed0215802462513e4d6ac87d0",
+    "labels/PTEN_HUMAN_Mighell_2018_indels.csv": "01414407d173f56669054638b511b9754ee257fe4fa2064197606f43b05e1f3e",
+    "labels/Q8EG35_SHEON_Campbell_2022_indels.csv": "c56e46b07947d83598fa8e802582e8ca75d7cdc8fee15c1e69421037bdd0b627",
+    "labels/RAD_ANTMA_Tsuboyama_2023_2CJJ_indels.csv": "21a03625f27c57c2887ea26222b2ee627276af72f028bf05c184e6523f36d4d7",
+    "labels/RCD1_ARATH_Tsuboyama_2023_5OAO_indels.csv": "5090af71ea09297c268d03248f61500c87565dbb2d8f60f192a68e30fa1e646f",
+    "labels/RD23A_HUMAN_Tsuboyama_2023_1IFY_indels.csv": "4f8f2271abb7713213e25bbf2cd44c6c4012626cd5bf0abcf9ba0c2eba799bb1",
+    "labels/RPC1_BP434_Tsuboyama_2023_1R69_indels.csv": "6b79a40d0e5b4a4fb5010931cf395cf708ba4a4f623940e2272ee2399eb3c81e",
+    "labels/RS15_GEOSE_Tsuboyama_2023_1A32_indels.csv": "801c0ff692c7de299287af94f2f4d645b67fcd280f6552560f70dafcae4ec6e0",
+    "labels/S22A1_HUMAN_Yee_2023_abundance_indels.csv": "093d393704daaee46dc5dcee5e40183e4b5da9c8af33c8af87526b368d445579",
+    "labels/S22A1_HUMAN_Yee_2023_activity_indels.csv": "2b86e4bb03c47d5d3ba322efd42d7ce2de538d60db2a06e8639f44b16ddf88be",
+    "labels/SAV1_MOUSE_Tsuboyama_2023_2YSB_indels.csv": "d691aa8e390362724454b3be4e309f83117bfc20e421604ae48b07a93bbacbe0",
+    "labels/SDA_BACSU_Tsuboyama_2023_1PV0_indels.csv": "3d7b7f41774edd182672a67a0f2439ab0649901bfe19277504f5cf4dbcf552ef",
+    "labels/SOX30_HUMAN_Tsuboyama_2023_7JJK_indels.csv": "5a7e95cf073bb41860ddfb9f9f5b5de467185d03dd472265cc001e91b9297665",
+    "labels/SPG2_STRSG_Tsuboyama_2023_5UBS_indels.csv": "b845e0fabc4d426b7ebfcc0e2c7eb50b21f2f6167579d45eb47de91ad02fd419",
+    "labels/SPTN1_CHICK_Tsuboyama_2023_1TUD_indels.csv": "09e1c51910f9156e17ca2a27d03b91f3faf3345fce8dbbd239ed92678bf583c1",
+    "labels/SQSTM_MOUSE_Tsuboyama_2023_2RRU_indels.csv": "340a70aa09e086e7d81f6f16ce44be2e9f4c02bcac4a1f35eb7dde71a819d1e5",
+    "labels/SR43C_ARATH_Tsuboyama_2023_2N88_indels.csv": "952f7fee1ef3a36f5d544c760531945650757c5ebd52735c494a76d66e838e13",
+    "labels/SRBS1_HUMAN_Tsuboyama_2023_2O2W_indels.csv": "936242288e5358558b0a325f99c745fc7801e841e75bbcb9d797aaaeb5159df7",
+    "labels/TCRG1_MOUSE_Tsuboyama_2023_1E0L_indels.csv": "b860dcf2a251a2c064912da9d2c418f94c0a3b0eb9a003fa892f5e865e697d5e",
+    "labels/THO1_YEAST_Tsuboyama_2023_2WQG_indels.csv": "268e37f5361c4b3847871de18c57a8b5dc411408ae320af91a7b99eaf1539740",
+    "labels/TNKS2_HUMAN_Tsuboyama_2023_5JRT_indels.csv": "f825c63f68efeffb0f499c4b45f03cb70d03d9d9b0d4cb032634ff9fb12c3671",
+    "labels/UBE4B_HUMAN_Tsuboyama_2023_3L1X_indels.csv": "1990e68d876aa5756247ebb6383942a534c2c837347d8cfa10403937c2e43b21",
+    "labels/UBR5_HUMAN_Tsuboyama_2023_1I2T_indels.csv": "cb4cc2e84918baf06db23ea49ccc92fde0d51c4bb5ef07fd02b78f81a5da654a",
+    "labels/VG08_BPP22_Tsuboyama_2023_2GP8_indels.csv": "0e982f6493f78a63dbb96f413e7f9a98378288e279e89d40cf3cc7f3d29d964a",
+    "labels/VILI_CHICK_Tsuboyama_2023_1YU5_indels.csv": "1b04c6ea6fcae3352f954ac1f4253e2c96377d7083213c0d99f02aec61a1b991",
+    "labels/VRPI_BPT7_Tsuboyama_2023_2WNM_indels.csv": "976852dec462e018a3682be83eab28ad129d06d3e6e3bc2000333cf3dede33cd",
+    "labels/YNZC_BACSU_Tsuboyama_2023_2JVD_indels.csv": "7402d733cc1d5a9d720f1eb57b3aeefde2d9765b06df961282fce3a76007544f",
+    "official_merged/A4_HUMAN_Seuma_2022_indels.csv": "4982ebebec2025d57b5eef06ef0632206373203ac9625fd37e94450cd91a17b6",
+    "official_merged/AMFR_HUMAN_Tsuboyama_2023_4G3O_indels.csv": "80766d5316483462d4127342ae1659d69a6b005ffdaf08222250e625ab673755",
+    "official_merged/ARGR_ECOLI_Tsuboyama_2023_1AOY_indels.csv": "f1e11bb1957f3a79083dae066caad47a9f4cab49196c1de31417bac4bdbcd8f3",
+    "official_merged/B1LPA6_ECOSM_Russ_2020_indels.csv": "52fd27e9060880038b316a2c4e0e8925b025456255041120b3504e8d6ed1b9fb",
+    "official_merged/BBC1_YEAST_Tsuboyama_2023_1TG0_indels.csv": "5e6fe49289924caa4a3a02d4a0d853770b04d62c6c8961e155f8a8eb6b2a64cf",
+    "official_merged/BCHB_CHLTE_Tsuboyama_2023_2KRU_indels.csv": "0a911022e2b6f09bbfb6660075cb6aa89b8854015ea613da8a05b99eae7fcf97",
+    "official_merged/BLAT_ECOLX_Gonzalez_2019_indels.csv": "9094bedfbda95b9eb4de14189863e5222a779a1c98e3d0e8093f9308fa2ec864",
+    "official_merged/CAPSD_AAV2S_Sinai_2021_designed_indels.csv": "0a08ad8650d7e6b7a03cd14ae44741a3f64c83e8b890a410932c07748127f632",
+    "official_merged/CAPSD_AAV2S_Sinai_2021_library_indels.csv": "5646fbc41c98ee588022a7172a22a8c587abda53dba68a6944621b3a2360c302",
+    "official_merged/CATR_CHLRE_Tsuboyama_2023_2AMI_indels.csv": "ff36b1678be76f460700f23958e786e6b7c353c15c3c3782b7a23e1ac28b5127",
+    "official_merged/CBPA2_HUMAN_Tsuboyama_2023_1O6X_indels.csv": "c84c7f23b402a5f3f160f5e814f26701130caeb22405f5243f264d7bfc133a48",
+    "official_merged/CBX4_HUMAN_Tsuboyama_2023_2K28_indels.csv": "f63f4bc48b529b0fa24db0d32fddd4bfafbd97630b49e2ea06f2cdcb308cd2db",
+    "official_merged/CSN4_MOUSE_Tsuboyama_2023_1UFM_indels.csv": "723f76da074824b88a3999bc44aaf0bde2605259adf9b6ed3f06e1bfa01cdca4",
+    "official_merged/CUE1_YEAST_Tsuboyama_2023_2MYX_indels.csv": "9ca12b853951b0e47c7ee914cfbd4b78ea65236b08042161b4003bbdcb12f0ab",
+    "official_merged/DN7A_SACS2_Tsuboyama_2023_1JIC_indels.csv": "4ec395cb0c6274c395aae83faf1216dd7dca79524c4a33c994a35db644a22bce",
+    "official_merged/DNJA1_HUMAN_Tsuboyama_2023_2LO1_indels.csv": "c39a2992b6e4e72563d42e3d139a79b2df30dae6a7f844decd90fab415b0ca55",
+    "official_merged/DOCK1_MOUSE_Tsuboyama_2023_2M0Y_indels.csv": "0f776fee2a445a86a8e37d291e786c97db3da47e53f32824f46250f4fda3d232",
+    "official_merged/EPHB2_HUMAN_Tsuboyama_2023_1F0M_indels.csv": "d7e137345639a737f7e7bcfd8c7cafb29f858472be14e936f4ee21403f4fde12",
+    "official_merged/FECA_ECOLI_Tsuboyama_2023_2D1U_indels.csv": "ba9bd8bf2f1fb3e38f706f2b453c71644a71ef3c4493c49bf7e3fd2a138af7d0",
+    "official_merged/HCP_LAMBD_Tsuboyama_2023_2L6Q_indels.csv": "651315ce2fcb0e7cb9ddbc7ac290c37233482430f46f87c647f2dca7a546e49a",
+    "official_merged/HECD1_HUMAN_Tsuboyama_2023_3DKM_indels.csv": "4919315b4649a411382078888d9be20771d35c7808bc9891c8f03e6d68e05388",
+    "official_merged/HIS7_YEAST_Pokusaeva_2019_indels.csv": "1e9759059518bd37a737305255df1e67078198278e665ce3456fc15fcd1a7ec6",
+    "official_merged/ILF3_HUMAN_Tsuboyama_2023_2L33_indels.csv": "ff8eb866aa498958504f6ec76fb79dfe3fce101d8c667f99aee711176838c38e",
+    "official_merged/KCNJ2_MOUSE_Macdonald_2022_indels.csv": "4cdcc94fed43383cfb73263fc4f962ebfb7e5c2a33061b6362461c68104b66ae",
+    "official_merged/MAFG_MOUSE_Tsuboyama_2023_1K1V_indels.csv": "a018bbe2087403f8027f569559114104c88cf478edb9b28177acc8d98c2ea9c5",
+    "official_merged/MBD11_ARATH_Tsuboyama_2023_6ACV_indels.csv": "8d7b02c7bfa9387bd8e6fddf5c6cdfff5aa57b3c8eb188d767fc6eb056defcf5",
+    "official_merged/MYO3_YEAST_Tsuboyama_2023_2BTT_indels.csv": "3e3a1161405f9fd1d3732c06c70e67def3d6df99aeb2a2d27f5106fb35075c4c",
+    "official_merged/NKX31_HUMAN_Tsuboyama_2023_2L9R_indels.csv": "545e78bb2a59fb0397a09e83cb4dd6c4f1da587f75689aa5d8aa0aa76ee9f960",
+    "official_merged/NUSA_ECOLI_Tsuboyama_2023_1WCL_indels.csv": "6ceb8ecbed1fc024499dd8ae296270da8c4ea2447abdae4c7f03968605b348d0",
+    "official_merged/NUSG_MYCTU_Tsuboyama_2023_2MI6_indels.csv": "6794202e6d09e8a3e6a73877f68da5463b56ee502fef43ab85801f1e65e867b5",
+    "official_merged/OBSCN_HUMAN_Tsuboyama_2023_1V1C_indels.csv": "08f0dd2375390dc38228fb7f89732d5d5eb3740ce95e4d3238b10e508419a39c",
+    "official_merged/ODP2_GEOSE_Tsuboyama_2023_1W4G_indels.csv": "c9957005e7565fa7dd29f1ba0d8d7efd17479fd72cbf6f60f1e8812209be050c",
+    "official_merged/OTU7A_HUMAN_Tsuboyama_2023_2L2D_indels.csv": "13cb6607096975382b6f9bcc7167c43c7e60908db60561a6a40daaaee1449bb6",
+    "official_merged/P53_HUMAN_Kotler_2018_indels.csv": "394f62e82b9b238cf2b19372bbb01779d7b409eaceea727f6ec43c3e70b11b17",
+    "official_merged/PIN1_HUMAN_Tsuboyama_2023_1I6C_indels.csv": "16b664c83b10d4e4ad9af4b7dbafa516a1cbe7c0d56fcfae7154d97a0805fc27",
+    "official_merged/PITX2_HUMAN_Tsuboyama_2023_2L7M_indels.csv": "febf54b188cfcd84a4bde5f41d73126213d4153431c45ba6f3070974e92d5785",
+    "official_merged/PKN1_HUMAN_Tsuboyama_2023_1URF_indels.csv": "28e583f9834af8ee4ed8fbf49e6a07898b06d0294d68280ce7c302dd3a0a4a22",
+    "official_merged/POLG_PESV_Tsuboyama_2023_2MXD_indels.csv": "2de0a8a1031ba802c2131593404326c10d1019716fd155f92e198eac8b6d9b99",
+    "official_merged/PR40A_HUMAN_Tsuboyama_2023_1UZC_indels.csv": "d46a40512017ed590b5be62457ff2d7b54fea7b27e854badbe922fb7dabad71a",
+    "official_merged/PSAE_PICP2_Tsuboyama_2023_1PSE_indels.csv": "9f3dce135ff43255e956faeeb51567331033845111976e5fa327315524f77f9d",
+    "official_merged/PTEN_HUMAN_Mighell_2018_indels.csv": "cf6c3eb215d9d6e6d1d583639d29ae976c61fbd40e1043c38bfe6957413fe603",
+    "official_merged/Q8EG35_SHEON_Campbell_2022_indels.csv": "16e443862e860ce32a958acc5f9aa6ac9077746e370b431d907828e5dc638e3b",
+    "official_merged/RAD_ANTMA_Tsuboyama_2023_2CJJ_indels.csv": "5dda79e11cad0c9ef63c4d0dbfa869fe7b298c76d713cf321a5b992b8eddea92",
+    "official_merged/RCD1_ARATH_Tsuboyama_2023_5OAO_indels.csv": "e6deac46d9ef873cec6d8c699900bea1c139fd0d43185731100680e619808b62",
+    "official_merged/RD23A_HUMAN_Tsuboyama_2023_1IFY_indels.csv": "b1db5fb61e64b1b6696af9c96489f7cf904a8a4bf6bbf2d212d6baa23c0cdf76",
+    "official_merged/RPC1_BP434_Tsuboyama_2023_1R69_indels.csv": "299c3f1e8c4abb708271f6cc8880f44e19549950ab9bfd9852fd73b07faa2e6a",
+    "official_merged/RS15_GEOSE_Tsuboyama_2023_1A32_indels.csv": "2b60bf1a1512eaba6d93856d8a4eb419db82be3a735505d693f376912c510b1b",
+    "official_merged/S22A1_HUMAN_Yee_2023_abundance_indels.csv": "ad05033f4f14707276b9d6f4d71fe0079116f0a106079fcdbb1c8d28d439e846",
+    "official_merged/S22A1_HUMAN_Yee_2023_activity_indels.csv": "c0f1dd33ff9afcbfd8204fd062e4fe3faa0f5078672707c2b97982d50226645e",
+    "official_merged/SAV1_MOUSE_Tsuboyama_2023_2YSB_indels.csv": "b9d79e51fee9368907e4ba46cc8d6fc51f2acef6a99228d6389e15a424ad68a4",
+    "official_merged/SDA_BACSU_Tsuboyama_2023_1PV0_indels.csv": "92031b4585813212aebe9b0619f467f5a210c8081f8968e4915695b630574f93",
+    "official_merged/SOX30_HUMAN_Tsuboyama_2023_7JJK_indels.csv": "0c71791f619eaa6b54eff7997a219e26eafb8204369269a9c7dd1231a251cb95",
+    "official_merged/SPG2_STRSG_Tsuboyama_2023_5UBS_indels.csv": "3d59a04c6971423f6817672900333e5ff7a2d47c5e17b0c2d012297d3b8e386c",
+    "official_merged/SPTN1_CHICK_Tsuboyama_2023_1TUD_indels.csv": "62ecee94003c786169c5fe4c6e190009590f854e1221b51ee2d6ac6963da96c3",
+    "official_merged/SQSTM_MOUSE_Tsuboyama_2023_2RRU_indels.csv": "343a66702390e8c8395c163fabba0d64e187dd3dc1bf7640d3b357c47afcb1c3",
+    "official_merged/SR43C_ARATH_Tsuboyama_2023_2N88_indels.csv": "be22bdd0a8c8274392c432eec3ee6efa9a7c92e41cad77872b05fd2c1c03ba80",
+    "official_merged/SRBS1_HUMAN_Tsuboyama_2023_2O2W_indels.csv": "75e0feef22547a778d385714e8e8cf859a0b355d747778cb62f566e9df14e645",
+    "official_merged/TCRG1_MOUSE_Tsuboyama_2023_1E0L_indels.csv": "85cbb8515ad784f0a75a3c43c51ba0ac0e51aeb2fd609dbffc3bfd61d3f3c2f4",
+    "official_merged/THO1_YEAST_Tsuboyama_2023_2WQG_indels.csv": "81874968eafee6656638cf99d33c4e4cdacdff11f1b91cc18f25fa5aba7ce881",
+    "official_merged/TNKS2_HUMAN_Tsuboyama_2023_5JRT_indels.csv": "32fcc684ce2b0c15847335c461c0e6730589d5f0bc258c4264ce5dd07e193029",
+    "official_merged/UBE4B_HUMAN_Tsuboyama_2023_3L1X_indels.csv": "47cdb26ae9540e98cd20a38ec5d115f879bd5823f55b3b1030a6e0ee16eb07a0",
+    "official_merged/UBR5_HUMAN_Tsuboyama_2023_1I2T_indels.csv": "362a70b7918c71fa673bd8778ee2e78c731b8b0e41ff372a0c23be1fed141002",
+    "official_merged/VG08_BPP22_Tsuboyama_2023_2GP8_indels.csv": "213276c9331fb1c2d5e5d941e7296b94948590724bea12bb84a9fce2d4137a94",
+    "official_merged/VILI_CHICK_Tsuboyama_2023_1YU5_indels.csv": "26965ca921512f2b4c12f79da3f4ec6753a93a17d15f54f74512f012f1aaf091",
+    "official_merged/VRPI_BPT7_Tsuboyama_2023_2WNM_indels.csv": "f086890facbc392019f35d018fc4dbfca3c693317cee0874f679c901d4ab017e",
+    "official_merged/YNZC_BACSU_Tsuboyama_2023_2JVD_indels.csv": "673c8657db91ed99c5c2cdbfe45b4c1ebc5b7c200501098541e81cc4e82ca5f8",
+    "predictions/A4_HUMAN_Seuma_2022_indels.csv": "8046bc3431837e60aab98488cba1741b451ae1ffdaa7c78848976dbdae7d1b31",
+    "predictions/AMFR_HUMAN_Tsuboyama_2023_4G3O_indels.csv": "e453ae778cc724be6bb07ca562efb1b06424724de3274cd10e1caa2f53be1530",
+    "predictions/ARGR_ECOLI_Tsuboyama_2023_1AOY_indels.csv": "5e1b732ad5463f65d1470e7465f95b752593742ba12947988f0e91d0f142f6d5",
+    "predictions/B1LPA6_ECOSM_Russ_2020_indels.csv": "3aebefba4a927f93483ea54901598d261f73e4971a9bf2d83754015120093363",
+    "predictions/BBC1_YEAST_Tsuboyama_2023_1TG0_indels.csv": "cadb088e33a0f0f24991935b4652a6859a04106a8df1162eb46f89728454b885",
+    "predictions/BCHB_CHLTE_Tsuboyama_2023_2KRU_indels.csv": "c6575902d0437a7c19a83f33f3ae3e1b3738b2d77f46cf1062275fd583158c28",
+    "predictions/BLAT_ECOLX_Gonzalez_2019_indels.csv": "893eddc9f62e091a76f1794a2389d21dacdd8b3a651738462e7fe118f328aa8e",
+    "predictions/CAPSD_AAV2S_Sinai_2021_designed_indels.csv": "c134a77f46b1e49ea2ccb3747e52b1b9fbc9120414238b0a14a8eec8f8d7a5b3",
+    "predictions/CAPSD_AAV2S_Sinai_2021_library_indels.csv": "bfab07ea65b64fb33390564dd250448eb8e6b42433b720f726178aa05e0f3895",
+    "predictions/CATR_CHLRE_Tsuboyama_2023_2AMI_indels.csv": "0101d5f56a726c31f251b9ea298987f8e82e0be6bacffea4c27fb95ccd62398d",
+    "predictions/CBPA2_HUMAN_Tsuboyama_2023_1O6X_indels.csv": "5a7d1ec2db8367414b97a8e9685dcd7b28aa56a1a924c7ae098eaa022d605116",
+    "predictions/CBX4_HUMAN_Tsuboyama_2023_2K28_indels.csv": "c7fd24cc5e03622849e60d907b3a1fd19ae1ef477ba077b27c2de0aa08cdbea5",
+    "predictions/CSN4_MOUSE_Tsuboyama_2023_1UFM_indels.csv": "785612fdf256be2128f08dedba663b4aafe6f7dac311e38c31ff0069502367ff",
+    "predictions/CUE1_YEAST_Tsuboyama_2023_2MYX_indels.csv": "5208d29ed4e9a5b9b410cd52f40207068ba451f1b5e3923f6764210a3e42798d",
+    "predictions/DN7A_SACS2_Tsuboyama_2023_1JIC_indels.csv": "7c804cb2c1e066bba3df7725daf7108260e8b966d732192b64cca400e09d9b61",
+    "predictions/DNJA1_HUMAN_Tsuboyama_2023_2LO1_indels.csv": "b790f784ff6d47645eadde536139bdbf7d474aac921f9864b76106bce3c2645a",
+    "predictions/DOCK1_MOUSE_Tsuboyama_2023_2M0Y_indels.csv": "f41fc761168de412337ce4902c7bcdecc3fca20b1810f6a6f6321e2a47c5e8d8",
+    "predictions/EPHB2_HUMAN_Tsuboyama_2023_1F0M_indels.csv": "8f3188db219d37e914be8f8b26fc349ef20d4e5721eb506e5fa113aae68dba02",
+    "predictions/FECA_ECOLI_Tsuboyama_2023_2D1U_indels.csv": "6c2682c403565bfb92b5dac2381ecaa87573e286a0104883e55d896453d748c9",
+    "predictions/HCP_LAMBD_Tsuboyama_2023_2L6Q_indels.csv": "aa5163c75f432c2b47f56309c4987aaf7fc6512dc63a4516b19e474efce87f3a",
+    "predictions/HECD1_HUMAN_Tsuboyama_2023_3DKM_indels.csv": "4cfc8968e70c2ba3874d61d9acf79803e38bd7db3d42f0b5a841cf2b28355447",
+    "predictions/HIS7_YEAST_Pokusaeva_2019_indels.csv": "dce0426e40e0172ca8c0422c9ea0a49b8d91400624ab9d486a9aa3420bc09ace",
+    "predictions/ILF3_HUMAN_Tsuboyama_2023_2L33_indels.csv": "7649280d8528bd6a5115e450d79eeb75222e3e23d5f594a42b0756dd309b6e25",
+    "predictions/KCNJ2_MOUSE_Macdonald_2022_indels.csv": "70ae69317f0fd630b00fd53049cc958c8ba4ed874ffb257fe7173cfe117d04df",
+    "predictions/MAFG_MOUSE_Tsuboyama_2023_1K1V_indels.csv": "18e72299720a0469c7dd4087fe79d6a6b43c283c798e92462f946c7c1df5e0db",
+    "predictions/MBD11_ARATH_Tsuboyama_2023_6ACV_indels.csv": "8261928ae846dedad2d7edddd61a3cf7e8e90b6dff962e5ec22e8e0cab14484c",
+    "predictions/MYO3_YEAST_Tsuboyama_2023_2BTT_indels.csv": "a5fe25aa4b367347092bed69d359015c03fd4cadee44fb94d7bdf50b9457fd88",
+    "predictions/NKX31_HUMAN_Tsuboyama_2023_2L9R_indels.csv": "ab3aada19b66a8012559cffcbf2231d9fcda0fb033e02a4a1bb900dfa16b965a",
+    "predictions/NUSA_ECOLI_Tsuboyama_2023_1WCL_indels.csv": "8319175f3e9c5f1aaa84788649b7bacbe02dd9caada2615774363d5522b9250a",
+    "predictions/NUSG_MYCTU_Tsuboyama_2023_2MI6_indels.csv": "b65a96ab50abb9e96dd04595862827ae2ef9501739e077136df183040b4a427b",
+    "predictions/OBSCN_HUMAN_Tsuboyama_2023_1V1C_indels.csv": "9c8fa524dbe78cebc17c7288620fac9be30663421014ed03208c5cea9d3186ba",
+    "predictions/ODP2_GEOSE_Tsuboyama_2023_1W4G_indels.csv": "7492105194ed00f0e8ecb0b211279dd1e9b1cde270ffff7b6557d451e0d8e9dd",
+    "predictions/OTU7A_HUMAN_Tsuboyama_2023_2L2D_indels.csv": "d97658067a40c74b886ff09f7cf9b34f4f6c1a9ae6a606cfe393036ed84562d8",
+    "predictions/P53_HUMAN_Kotler_2018_indels.csv": "c1c51c89083036c168774347ac6a20c8a978dea6c77c7859cd2033904936e3a3",
+    "predictions/PIN1_HUMAN_Tsuboyama_2023_1I6C_indels.csv": "eabd05d5be9e1048b71ea2623b18cf8f7032a56eea7efaa98bead356544eb373",
+    "predictions/PITX2_HUMAN_Tsuboyama_2023_2L7M_indels.csv": "2231792b4de133148de1f57f118ce42bafd62b4d053952161d8887f5ea672020",
+    "predictions/PKN1_HUMAN_Tsuboyama_2023_1URF_indels.csv": "4fa70c4109591983415e7315af3396ae109a41d7c3ee87673986511a7350593f",
+    "predictions/POLG_PESV_Tsuboyama_2023_2MXD_indels.csv": "76056a9ad95979a4280b4ddd24f7dee00b9c387c65f55267f39725d00712d233",
+    "predictions/PR40A_HUMAN_Tsuboyama_2023_1UZC_indels.csv": "9f327f4585cdb035d34cbdf1bc81a2cae00e0b876a8ed00d8c8125021e39f76f",
+    "predictions/PSAE_PICP2_Tsuboyama_2023_1PSE_indels.csv": "d78edd71fe5d33eb52339489b57736994e75eb686a611ca0c1ba3af49dfd7a5a",
+    "predictions/PTEN_HUMAN_Mighell_2018_indels.csv": "1cb3597a9bb56546044b3223dfa9c1450307a22517a334218b075c97021a6c73",
+    "predictions/Q8EG35_SHEON_Campbell_2022_indels.csv": "86e374025243d58d85d9a7eeb352efc4132044add7906d2a2761c0e39dec0356",
+    "predictions/RAD_ANTMA_Tsuboyama_2023_2CJJ_indels.csv": "73ce37de23e327d38f1be0eb81f532bf1385fe9d4c3c3661132129c9908329c3",
+    "predictions/RCD1_ARATH_Tsuboyama_2023_5OAO_indels.csv": "3559353c52d523d11281af3eaed6d25516f18fab6815d41059838ce7a3f96c47",
+    "predictions/RD23A_HUMAN_Tsuboyama_2023_1IFY_indels.csv": "7ee61eae0eee95e16f70a31407b6505f97f909b428739f9113edb0c6c7f0e94f",
+    "predictions/RPC1_BP434_Tsuboyama_2023_1R69_indels.csv": "3502dbf8030a1ba67168ae71273a2a99bee98d50d6e31b9181ca467c392361be",
+    "predictions/RS15_GEOSE_Tsuboyama_2023_1A32_indels.csv": "c3f4c275ba3a94e1e001bcb0627f46069cb622f6841bc6464ecd22f1830b2c27",
+    "predictions/S22A1_HUMAN_Yee_2023_abundance_indels.csv": "5656c4f9f03fd73ffca497b7285450d6f9fa72ab1968ab5cbe61fe84925bff2e",
+    "predictions/S22A1_HUMAN_Yee_2023_activity_indels.csv": "68ac3e22881e0e7d9fbd9880e87c9595092cf1a0677c8580207e5b6eb3842749",
+    "predictions/SAV1_MOUSE_Tsuboyama_2023_2YSB_indels.csv": "5ec5c13f91dbdf7c8ab0a74598ab2feec87eebd5e95c5c1543aab3442dc3d9ba",
+    "predictions/SDA_BACSU_Tsuboyama_2023_1PV0_indels.csv": "610b64bb818204539982f0600cbfd0ab60a87c3c9b4a66703b21b5053b4c1e5c",
+    "predictions/SOX30_HUMAN_Tsuboyama_2023_7JJK_indels.csv": "5c2234bcd1ff0f28d8a1a343497fe2239541cfe88aaf1ac02feb97038ed315cd",
+    "predictions/SPG2_STRSG_Tsuboyama_2023_5UBS_indels.csv": "1573b3a5c717254f9b39bb6f43efee2f20a797a8ca57e53b5cdf81d761784b4c",
+    "predictions/SPTN1_CHICK_Tsuboyama_2023_1TUD_indels.csv": "5124c0adf66d88efb1fc2de768af574898f21257b42d238e5e74ac21c5a7fca8",
+    "predictions/SQSTM_MOUSE_Tsuboyama_2023_2RRU_indels.csv": "75e8e96f8c47c324085aba8d0d3a6602e4baf9a6575deee75cde921b346ae7e8",
+    "predictions/SR43C_ARATH_Tsuboyama_2023_2N88_indels.csv": "8efd5e581d10b6c079c5f2380860dd1e8469815236b097f679f80dcaed0d26a2",
+    "predictions/SRBS1_HUMAN_Tsuboyama_2023_2O2W_indels.csv": "4d3685961396c4a512e367c17b0afc92f67d2bbabbff4dd903131511d24a63eb",
+    "predictions/TCRG1_MOUSE_Tsuboyama_2023_1E0L_indels.csv": "80da6cf043e63f567c3ff8ae395476cfd49f1d276f92a1a1795a5a83c8130d9e",
+    "predictions/THO1_YEAST_Tsuboyama_2023_2WQG_indels.csv": "2d39fe36c65b0319d3bf9cb43e3c6d011e929e0aeab67238d16756693cae1347",
+    "predictions/TNKS2_HUMAN_Tsuboyama_2023_5JRT_indels.csv": "baf06ddbc64c89d7cf832bd9ca7ed6390f641bbcc38e9a33fb66ef8233de54bc",
+    "predictions/UBE4B_HUMAN_Tsuboyama_2023_3L1X_indels.csv": "4493a55f8a20cb012c537c72a500f350dad922fa87ffb4219d997622c6ef29e1",
+    "predictions/UBR5_HUMAN_Tsuboyama_2023_1I2T_indels.csv": "9635c65e8c109bfde9420b48f60df75c79e2aff71c104726056b1219386bd90a",
+    "predictions/VG08_BPP22_Tsuboyama_2023_2GP8_indels.csv": "16878d9ab68b2f35a117ecb8a351ba95eb0409de62c9bbbe0338ae3344ac2a55",
+    "predictions/VILI_CHICK_Tsuboyama_2023_1YU5_indels.csv": "917db3a088d8c27a066061e11841e6478180df3a81e42f9b21588db9c205ff78",
+    "predictions/VRPI_BPT7_Tsuboyama_2023_2WNM_indels.csv": "d476e98b183e3358e0fee5cb5a0de3a89bda033e35b3f55b9f7fc44ebb66d890",
+    "predictions/YNZC_BACSU_Tsuboyama_2023_2JVD_indels.csv": "f3fdf8b62b6e6d0d9ce74c8a805526697fcf038f32c12406c385ab051b38c8aa",
+    "summary.csv": "31ded64c82acbf8a6503bba65d3af6b2a0946e7a232713e673feb560c1e1899e"
+  }
+}
