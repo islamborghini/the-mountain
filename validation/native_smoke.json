@@ -1,0 +1,64 @@
+{
+  "model_version": "mountain-average-ties-v1",
+  "method": "mountain",
+  "source": "sequences",
+  "input_sha256": "1847d0510a9e77ad55a74b92d08ed31610f151652f4d66c9c7ee7cb92f41d8b0",
+  "rank_tie_policy": "average",
+  "ranking_scope": "variants within each protein_id",
+  "score_direction": "higher predicts greater fitness",
+  "groups": [
+    {
+      "protein_id": "DN7A_SACS2",
+      "variants": 3,
+      "signals": [
+        "RITA_s",
+        "ESM2_650M"
+      ],
+      "profile": "partial_sequence_ensemble",
+      "original_full_profile": false
+    }
+  ],
+  "component_scoring": {
+    "ordered_sequences_sha256": "6166fc0f03607e153a4058d3b562d3ba99822efd51264b0e5cdc156a5849e110",
+    "n_sequences": 3,
+    "device": "cpu",
+    "features": [
+      {
+        "name": "RITA_s",
+        "repository": "lightonai/RITA_s",
+        "revision": "818eb05afad820ba5fd6485b224559932eccd01f",
+        "scoring_version": 1,
+        "scoring_policy": "sum_forward_reverse_chunk_mean_logp",
+        "length_policy": "chunk",
+        "max_residues": 1023,
+        "precision": "float32"
+      },
+      {
+        "name": "ESM2_650M",
+        "repository": "facebook/esm2_t33_650M_UR50D",
+        "revision": "08e4846e537177426273712802403f7ba8261b6c",
+        "scoring_version": 1,
+        "scoring_policy": "unmasked_mean_observed_residue_logp",
+        "length_policy": "error",
+        "max_residues": 1022,
+        "precision": "float32"
+      }
+    ],
+    "torch_version": "2.8.0",
+    "original_method": false,
+    "transformers_version": "4.44.2",
+    "profile": "partial_sequence_ensemble",
+    "truncated_sequences": 0
+  },
+  "benchmark_record_verified": false,
+  "benchmark_note": "This prediction run does not establish a record. Subset profiles require separate validation.",
+  "versions": {
+    "python": "3.12.12",
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3"
+  },
+  "output_sha256": "4f0c85e67d830986d4bb8c55f23561662bd9772e65ccc7d5d2cfeba55805fdf0",
+  "validation_scope": "Real CPU RITA-small and ESM2-650M inference on three DN7A benchmark sequences; no full six-model inference claim.",
+  "RITA_s_maximum_absolute_difference_from_published": 4.76837158203125e-07
+}

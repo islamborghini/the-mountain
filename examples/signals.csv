@@ -1,0 +1,4 @@
+protein_id,variant_id,mutated_sequence,RITA_s,ESM2_650M
+example_protein,variant_1,MKTAYIAKQRQISFVKSHFSRQDILDLWQ,-2.4,-0.5
+example_protein,variant_2,MKTAYIAKQRQISFVKSHFRQDILDLWQ,-2.6,-0.9
+example_protein,variant_3,MKTAYIAKQRQISFVKSHFSSRQDILDLWQ,-2.2,-0.7

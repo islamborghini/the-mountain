@@ -1,0 +1,24 @@
+{
+  "upstream_commit": "144fe22b07dfaeec2b366f2346203a9838a55b4c",
+  "upstream_sha256": {
+    "performance_DMS_benchmarks.py": "0002bc1b031c02dc2d67fde53da092c8fd301415645e8e83b425b4183570eba2",
+    "constants.json": "e7b53a99952067b8c378d9072d38d71572b624fa357251bb8d3f53bf9b073e7a"
+  },
+  "profile": "sequence_6",
+  "reference_sha256": "09534e16eeeb80ce22243f6cada151db654c7330117f2a97980f6707da87c7cd",
+  "run_manifest_sha256": "e62b696cfbe8493c0e424c0aaf9daee86479ec8808f40015d22c7895c71ac4e6",
+  "comparisons": {
+    "The_Mountain": {
+      "assays": 66,
+      "per_assay_match": true,
+      "official_spearman": 0.541
+    },
+    "PoET": {
+      "assays": 66,
+      "per_assay_match": true,
+      "official_spearman": 0.517
+    }
+  },
+  "exceeds_PoET_point_estimate": true,
+  "limitation": "Validates historical benchmark scores and evaluator agreement; not a fresh component-inference run or official leaderboard acceptance."
+}

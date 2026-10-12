@@ -1,3 +1,10 @@
 __pycache__/
 .DS_Store
 proteingym_artifact/
+.venv/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.local-validation/
+*.pyc
